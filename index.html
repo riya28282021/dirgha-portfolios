@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17152f">
+<title>Dirgha.exe — Cloud-minded Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17152f;--paper:#f6f3ff;--lav:#c7b8ff;--blue:#8edcff;--yellow:#ffe27a;--pink:#ffb8d2;--muted:#77738e;--line:rgba(23,21,47,.14);--mono:"DM Mono",monospace;--sans:"DM Sans",sans-serif;--display:"Space Grotesk",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.grain{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+nav{height:78px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:5}.brand{font:700 1.25rem var(--display);letter-spacing:-1px}.brand span{color:#7b63db}.navlinks{display:flex;gap:30px;font: .75rem var(--mono);color:#55516c}.navlinks a:hover{color:#7b63db}.nav-cta{border:1px solid var(--ink);border-radius:99px;padding:11px 17px;font: .72rem var(--mono);transition:.25s}.nav-cta:hover{background:var(--ink);color:white}
+.hero{min-height:690px;padding:95px 7vw 70px;position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;overflow:hidden}.eyebrow{font: .72rem var(--mono);letter-spacing:1px;text-transform:uppercase;color:#7664c8;display:flex;align-items:center;gap:10px}.pulse{width:8px;height:8px;background:#70cba6;border-radius:50%;box-shadow:0 0 0 5px #70cba622;animation:pulse 1.8s infinite}@keyframes pulse{50%{box-shadow:0 0 0 10px #70cba600}}h1{font:700 clamp(4rem,8vw,7.5rem)/.91 var(--display);letter-spacing:-.085em;margin:25px 0 25px}h1 .outline{color:transparent;-webkit-text-stroke:1.7px var(--ink)}h1 .dot{color:#8b75e9}.hero-copy{max-width:480px;color:#68647d;line-height:1.8;font-size:1rem}.hero-actions{display:flex;align-items:center;gap:13px;margin-top:32px;flex-wrap:wrap}.btn{border:1px solid var(--ink);border-radius:99px;padding:14px 21px;font: .76rem var(--mono);display:inline-flex;align-items:center;gap:12px;transition:.25s}.btn.primary{background:var(--ink);color:white}.btn:hover{transform:translateY(-4px);box-shadow:5px 5px 0 var(--lav)}.micro{font: .68rem var(--mono);color:#827e96;margin-top:30px}
+.art{height:475px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:390px;height:390px;border:1px dashed #a9a0ca;border-radius:50%;animation:spin 38s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:var(--yellow);top:55px;left:26px}.orbit:after{background:var(--pink);top:auto;left:auto;bottom:55px;right:26px}@keyframes spin{to{transform:rotate(360deg)}}.cloud{position:relative;width:260px;height:130px;background:var(--blue);border:2px solid var(--ink);border-radius:90px;filter:drop-shadow(10px 12px 0 var(--ink));animation:float 4s ease-in-out infinite}.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border:2px solid var(--ink);border-bottom:0}.cloud:before{width:115px;height:105px;border-radius:100px 100px 0 0;left:38px;top:-62px}.cloud:after{width:85px;height:82px;border-radius:100px 100px 0 0;right:30px;top:-42px}@keyframes float{50%{transform:translateY(-15px) rotate(-2deg)}}.cloud-face{position:absolute;z-index:2;top:42px;left:95px;font:700 25px var(--display);letter-spacing:5px}.sticker{position:absolute;padding:12px 15px;border:1.5px solid var(--ink);border-radius:12px;font: .7rem var(--mono);box-shadow:4px 4px 0 var(--ink);animation:wiggle 5s ease-in-out infinite}.s1{background:var(--yellow);top:54px;right:15px;transform:rotate(8deg)}.s2{background:var(--pink);bottom:62px;left:0;transform:rotate(-8deg);animation-delay:-2s}.s3{background:#c7f2c9;right:0;bottom:115px;animation-delay:-1s}@keyframes wiggle{50%{translate:0 -9px;rotate:3deg}}.spark{position:absolute;font-size:25px;color:#8b75e9;animation:twinkle 2s infinite alternate}.sp1{top:55px;left:70px}.sp2{bottom:50px;right:65px;animation-delay:1s}@keyframes twinkle{to{transform:scale(.5) rotate(35deg);opacity:.4}}
+.ticker{background:var(--yellow);border-block:1.5px solid var(--ink);padding:15px 0;overflow:hidden;white-space:nowrap;font: .72rem var(--mono);letter-spacing:1px}.ticker-track{display:inline-block;animation:marquee 28s linear infinite}.ticker span{margin:0 26px}.ticker b{color:#7964d4}@keyframes marquee{to{transform:translateX(-50%)}}
+section{padding:105px 7vw}.section-top{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:45px}.kicker{font: .7rem var(--mono);color:#806bd4;letter-spacing:1px;text-transform:uppercase}.section-title{font:700 clamp(2.5rem,5vw,4.5rem)/1 var(--display);letter-spacing:-.07em;margin:12px 0 0}.section-note{max-width:260px;color:var(--muted);font-size:.86rem;line-height:1.7}
+.about{background:#fffdf9}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:10vw;align-items:start}.about-card{background:var(--lav);border:1.5px solid var(--ink);border-radius:18px;padding:25px;min-height:245px;box-shadow:8px 8px 0 var(--ink);transform:rotate(-2deg)}.about-card .big{font:700 4rem var(--display);letter-spacing:-5px}.about-card p{font: .72rem var(--mono);line-height:1.7;max-width:220px}.about-text{font-size:1.12rem;line-height:1.9;color:#5f5b73}.about-text strong{color:var(--ink)}.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.tag{border:1px solid var(--line);border-radius:99px;padding:8px 12px;font: .66rem var(--mono);background:white}
+.stack{background:#e9e4ff}.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stack-card{background:var(--paper);border:1.5px solid var(--ink);border-radius:16px;padding:22px;min-height:155px;transition:.25s;position:relative;overflow:hidden}.stack-card:hover{transform:translateY(-7px) rotate(-1deg);box-shadow:6px 6px 0 var(--ink)}.stack-icon{font-size:1.7rem}.stack-card h3{font:600 1rem var(--display);margin:18px 0 6px}.stack-card p{font:.72rem var(--mono);color:#77738e;line-height:1.6;margin:0}
+.lab{background:var(--ink);color:var(--paper)}.lab .section-note{color:#aaa5c1}.lab .kicker{color:var(--blue)}.lab-panel{border:1px solid #55516e;border-radius:18px;overflow:hidden;background:#211f3d;box-shadow:0 20px 60px #09081755}.terminal-head{height:48px;border-bottom:1px solid #45415d;display:flex;align-items:center;padding:0 18px;gap:7px}.traffic{width:9px;height:9px;border-radius:50%;background:#ff9b9b}.traffic:nth-child(2){background:#ffe27a}.traffic:nth-child(3){background:#8de3b0}.terminal-label{margin-left:auto;font: .65rem var(--mono);color:#a5a0bc}.lab-content{display:grid;grid-template-columns:1fr 1fr;min-height:280px}.code{padding:30px;font: .78rem/2 var(--mono);color:#c9c4dc;border-right:1px solid #45415d}.code .purple{color:#c4aaff}.code .green{color:#9de5bb}.code .yellow{color:#ffe27a}.cloud-console{padding:30px;display:flex;flex-direction:column;justify-content:center}.console-label{font:.66rem var(--mono);color:#9d97b8;letter-spacing:1px}.console-status{display:flex;align-items:center;gap:10px;margin:17px 0 23px;font:600 1.2rem var(--display)}.status-dot{width:9px;height:9px;border-radius:50%;background:#8de3b0;box-shadow:0 0 12px #8de3b0}.metric{display:flex;justify-content:space-between;border-top:1px solid #45415d;padding:12px 0;font:.72rem var(--mono);color:#b5b0ca}.metric b{color:var(--blue);font-weight:400}.lab-button{margin-top:15px;background:var(--yellow);border:0;border-radius:99px;padding:12px 16px;align-self:flex-start;font:.68rem var(--mono);cursor:pointer;color:var(--ink);transition:.2s}.lab-button:hover{transform:scale(1.04)}
+.projects{background:#fffdf9}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.project{border:1.5px solid var(--ink);border-radius:18px;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-6px);box-shadow:7px 7px 0 var(--ink)}.project-art{height:210px;display:grid;place-items:center;position:relative;overflow:hidden}.project-art.one{background:var(--blue)}.project-art.two{background:var(--pink)}.project-art .window{width:72%;background:#fffdf9;border:1.5px solid var(--ink);border-radius:10px;box-shadow:7px 7px 0 var(--ink);padding:12px;transform:rotate(-4deg)}.window-bar{display:flex;gap:4px;border-bottom:1px solid var(--line);padding-bottom:8px}.window-bar i{width:6px;height:6px;border-radius:50%;background:#a9a0ca}.window-lines{padding:15px 5px 5px;display:grid;gap:7px}.window-lines span{height:7px;border-radius:10px;background:#ded8f6}.window-lines span:nth-child(2){width:70%;background:#b6e7f8}.window-lines span:nth-child(3){width:85%;background:#ffe27a}.project-symbol{font:700 5rem var(--display);color:var(--ink);position:absolute;right:10%;bottom:8%;transform:rotate(12deg)}.project-body{padding:23px}.project-meta{font:.65rem var(--mono);color:#806bd4;text-transform:uppercase;letter-spacing:1px}.project h3{font:600 1.35rem var(--display);margin:10px 0}.project p{color:#77738e;line-height:1.7;font-size:.85rem;margin:0}.project-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font:.65rem var(--mono)}.project-foot span:last-child{color:#8c82aa}
+.journey{background:var(--yellow)}.timeline{max-width:780px;margin:auto;border-left:1.5px solid var(--ink);padding-left:35px}.moment{position:relative;padding:0 0 34px}.moment:before{content:"";position:absolute;width:12px;height:12px;background:var(--pink);border:1.5px solid var(--ink);border-radius:50%;left:-42px;top:5px}.moment small{font:.67rem var(--mono);color:#6c5d25}.moment h3{font:600 1.3rem var(--display);margin:7px 0}.moment p{color:#6f6334;line-height:1.7;font-size:.87rem;margin:0}
+.contact{background:var(--lav);text-align:center;position:relative;overflow:hidden}.contact .section-title{font-size:clamp(3rem,7vw,6.7rem);max-width:850px;margin:15px auto 25px}.contact p{color:#5d5677;line-height:1.7}.contact .btn{margin-top:18px}.contact-star{position:absolute;font-size:45px;opacity:.65}.cs1{left:12%;top:25%}.cs2{right:13%;bottom:20%}
+footer{padding:25px 7vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--ink);color:#aaa5c1;font:.65rem var(--mono)}footer a{color:var(--yellow)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px}.art{height:390px}.orbit{width:320px;height:320px}.stack-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:45px}.about-card{max-width:340px}.lab-content{grid-template-columns:1fr}.code{border-right:0;border-bottom:1px solid #45415d}.section-top{align-items:flex-start;flex-direction:column}.section-note{max-width:480px}}
+@media(max-width:560px){nav{padding:0 5vw;height:68px}.navlinks{display:none}.hero{padding:65px 6vw 45px;min-height:auto}.hero h1{font-size:4.1rem}.art{height:330px}.cloud{transform:scale(.8)}.orbit{width:270px;height:270px}.s1{right:0}.s2{left:0}.s3{right:0;bottom:65px}section{padding:75px 6vw}.stack-grid{grid-template-columns:1fr 1fr;gap:9px}.stack-card{padding:15px;min-height:145px}.project-grid{grid-template-columns:1fr}.lab-content{min-height:0}.code,.cloud-console{padding:22px}.about-text{font-size:1rem}.contact-star{font-size:30px}footer{padding:22px 6vw}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<nav>
+  <a class="brand" href="#">dirgha<span>.exe</span></a>
+  <div class="navlinks"><a href="#about">ABOUT</a><a href="#stack">TOOLKIT</a><a href="#lab">CLOUD LAB</a><a href="#projects">PROJECTS</a></div>
+  <a class="nav-cta" href="#contact">LET'S CONNECT ↗</a>
+</nav>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow"><i class="pulse"></i> COMPUTER SCIENCE STUDENT · CLOUD ENTHUSIAST</div>
+    <h1>Hi, I'm<br><span class="outline">Dirgha</span><span class="dot">.</span><br>In the<br>cloud<span class="dot">_</span></h1>
+    <p class="hero-copy">Curious mind. Code in progress. I like exploring how the internet works behind the scenes — from virtual machines to systems that scale without breaking a sweat.</p>
+    <div class="hero-actions"><a class="btn primary" href="#projects">EXPLORE MY SPACE <span>↘</span></a><a class="btn" href="https://github.com/dirghabedade478-web" target="_blank" rel="noreferrer">GITHUB ↗</a></div>
+    <div class="micro">currently learning · constantly building · always curious</div>
+  </div>
+  <div class="art" aria-label="Illustration of a floating cloud">
+    <div class="orbit"></div><div class="cloud"><div class="cloud-face">: )</div></div>
+    <div class="sticker s1">☁ CLOUD NATIVE</div><div class="sticker s2">404: LIMITS NOT FOUND</div><div class="sticker s3">BUILD / BREAK / LEARN</div>
+    <span class="spark sp1">✳</span><span class="spark sp2">✦</span>
+  </div>
+</section>
+<div class="ticker"><div class="ticker-track"><span>☁ CLOUD COMPUTING</span><b>✳</b><span>DEPLOYMENT</span><b>✳</b><span>VIRTUALIZATION</span><b>✳</b><span>CODE & COFFEE</span><b>✳</b><span>SCALABILITY</span><b>✳</b><span>☁ CLOUD COMPUTING</span><b>✳</b><span>DEPLOYMENT</span><b>✳</b><span>VIRTUALIZATION</span><b>✳</b><span>CODE & COFFEE</span><b>✳</b><span>SCALABILITY</span><b>✳</b></div></div>
+<section class="about" id="about">
+  <div class="section-top reveal"><div><div class="kicker">01 / THE HUMAN BEHIND THE CODE</div><h2 class="section-title">A little bit<br>about me<span style="color:#8b75e9">.</span></h2></div><p class="section-note">Not a robot. Just someone who finds distributed systems oddly exciting.</p></div>
+  <div class="about-grid reveal">
+    <div class="about-card"><div class="big">0101<br>1010<span style="color:#fff">.</span></div><p>// curious by default<br>// debugging my way forward<br>// cloud is my playground</p></div>
+    <div><p class="about-text">I'm <strong>Dirgha</strong>, a Computer Science student with a growing interest in <strong>cloud computing and modern infrastructure</strong>. I'm fascinated by what happens after you hit “deploy” — how applications are hosted, how data travels, and how systems stay available as more people use them.</p><p class="about-text">I enjoy learning by experimenting, connecting concepts, and turning technical curiosity into practical work. My goal? Keep asking better questions and build things that make the digital world a little more interesting.</p><div class="tag-row"><span class="tag">☁ Cloud curious</span><span class="tag">⌘ Problem solver</span><span class="tag">↗ Always learning</span></div></div>
+  </div>
+</section>
+<section class="stack" id="stack">
+  <div class="section-top reveal"><div><div class="kicker">02 / MY DIGITAL TOOLBOX</div><h2 class="section-title">Things I speak<span style="color:#806bd4">.</span></h2></div><p class="section-note">A growing toolkit — some familiar, some currently in the learning queue.</p></div>
+  <div class="stack-grid">
+    <article class="stack-card reveal"><div class="stack-icon">☁️</div><h3>Cloud Computing</h3><p>IaaS · PaaS · SaaS<br>Regions · Availability zones</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">🧩</div><h3>Infrastructure</h3><p>Virtual machines · Storage<br>Networking · IAM</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">⌘</div><h3>Development</h3><p>Programming fundamentals<br>Web technologies · Git</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">⚡</div><h3>Modern workflows</h3><p>APIs · CI/CD concepts<br>Containers · Serverless</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">🌐</div><h3>Networking</h3><p>DNS · HTTP/HTTPS<br>IP addressing · Load balancing</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">🔐</div><h3>Cloud security</h3><p>Identity & access management<br>Encryption · Least privilege</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">📦</div><h3>Data & storage</h3><p>Object storage · Databases<br>Backup · Disaster recovery</p></article>
+    <article class="stack-card reveal"><div class="stack-icon">📈</div><h3>Scalability</h3><p>Auto scaling · Monitoring<br>Fault tolerance · Reliability</p></article>
+  </div>
+</section>
+<section class="lab" id="lab">
+  <div class="section-top reveal"><div><div class="kicker">03 / A TINY INTERACTIVE EXPERIMENT</div><h2 class="section-title">Inside the cloud lab<span style="color:var(--blue)">.</span></h2></div><p class="section-note">A pretend cloud console, because every portfolio deserves a little nerdy fun.</p></div>
+  <div class="lab-panel reveal">
+    <div class="terminal-head"><i class="traffic"></i><i class="traffic"></i><i class="traffic"></i><span class="terminal-label">dirgha@cloud-lab ~ terminal</span></div>
+    <div class="lab-content">
+      <div class="code"><div><span class="purple">$</span> <span class="green">cloudctl</span> status --region global</div><div style="color:#77738e"># checking the imaginary infrastructure...</div><div><span class="yellow">region</span> : ap-south-1</div><div><span class="yellow">compute</span> : virtual-machine</div><div><span class="yellow">network</span> : connected</div><div><span class="yellow">deployment</span> : <span class="green">ready_to_learn</span></div><div><span class="purple">$</span> <span class="green">echo</span> "Hello, cloud!"</div><div style="color:#9de5bb">Hello, cloud! ☁</div></div>
+      <div class="cloud-console"><div class="console-label">DEMO ENVIRONMENT / NOT LIVE CLOUD DATA</div><div class="console-status"><i class="status-dot"></i><span id="statusText">All systems curious</span></div><div class="metric"><span>COMPUTE NODES</span><b id="nodes">03 / 03</b></div><div class="metric"><span>LEARNING MODE</span><b id="mode">ON</b></div><div class="metric"><span>COFFEE LEVEL</span><b id="coffee">OPTIMAL</b></div><button class="lab-button" id="deployBtn">↻ RUN A DEPLOYMENT CHECK</button></div>
+    </div>
+  </div>
+</section>
+<section class="projects" id="projects">
+  <div class="section-top reveal"><div><div class="kicker">04 / THE BUILD LOG</div><h2 class="section-title">Projects & experiments<span style="color:#8b75e9">.</span></h2></div><p class="section-note">A space for ideas, coursework and things built while learning. Swap these concept cards for real projects as they are completed.</p></div>
+  <div class="project-grid">
+    <article class="project reveal"><div class="project-art one"><div class="window"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-lines"><span></span><span></span><span></span></div></div><div class="project-symbol">☁</div></div><div class="project-body"><div class="project-meta">CONCEPT / CLOUD INFRASTRUCTURE</div><h3>Cloud Campus</h3><p>A concept for a student-friendly cloud dashboard to bring compute, storage and deployment resources into one simple view.</p><div class="project-foot"><span>Cloud · UI · Infrastructure</span><span>IDEA 01 ↗</span></div></div></article>
+    <article class="project reveal"><div class="project-art two"><div class="window"><div class="window-bar"><i></i><i></i><i></i></div><div class="window-lines"><span></span><span></span><span></span></div></div><div class="project-symbol">⌘</div></div><div class="project-body"><div class="project-meta">CONCEPT / DEVELOPER TOOL</div><h3>Deploy Diary</h3><p>A learning log concept to document experiments, track deployment steps and make technical troubleshooting easier to revisit.</p><div class="project-foot"><span>DevOps · Documentation · Git</span><span>IDEA 02 ↗</span></div></div></article>
+  </div>
+  <p class="micro" style="margin-top:22px">These are illustrative portfolio concepts, not claims of completed projects.</p>
+  <div style="margin-top:30px"><a class="btn" href="https://github.com/dirghabedade478-web" target="_blank" rel="noreferrer">VIEW GITHUB PROFILE ↗</a></div>
+</section>
+<section class="journey">
+  <div class="section-top reveal"><div><div class="kicker">05 / LOADING THE NEXT CHAPTER</div><h2 class="section-title">The learning loop<span style="color:#806bd4">.</span></h2></div><p class="section-note">A developer's journey is less of a straight line and more of a really interesting loop.</p></div>
+  <div class="timeline reveal">
+    <div class="moment"><small>01 — UNDERSTAND</small><h3>Learn the fundamentals</h3><p>Build a strong base in computer science, programming, networking and operating systems.</p></div>
+    <div class="moment"><small>02 — EXPERIMENT</small><h3>Get hands-on with cloud</h3><p>Explore cloud service models, virtualisation, storage, networking and deployment workflows.</p></div>
+    <div class="moment"><small>03 — BUILD</small><h3>Turn concepts into projects</h3><p>Apply the theory through small experiments, practical implementations and documented learnings.</p></div>
+    <div class="moment"><small>04 — REPEAT</small><h3>Keep improving</h3><p>Debug, optimise, collaborate and stay curious about what's coming next in technology.</p></div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <span class="contact-star cs1">✳</span><span class="contact-star cs2">✦</span>
+  <div class="kicker">06 / OPEN A CONNECTION</div>
+  <h2 class="section-title">Got an idea?<br>Let's make it <span style="color:#fff">real.</span></h2>
+  <p>Always open to learning, collaborating and talking tech.</p>
+  <a class="btn primary" href="https://github.com/dirghabedade478-web" target="_blank" rel="noreferrer">FIND ME ON GITHUB ↗</a>
+</section>
+</main>
+<footer><span>© 2026 DIRGHA.EXE · MADE WITH CURIOSITY</span><span>NO PHOTOS. JUST PIXELS & <a href="#top">POTENTIAL ↑</a></span></footer>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const btn=document.getElementById('deployBtn');
+btn.addEventListener('click',()=>{
+ const status=document.getElementById('statusText'),nodes=document.getElementById('nodes'),mode=document.getElementById('mode'),coffee=document.getElementById('coffee');
+ btn.disabled=true;btn.textContent='⟳ CHECKING...';status.textContent='Running diagnostics...';
+ setTimeout(()=>{status.textContent='Deployment simulated ✓';nodes.textContent='03 / 03';mode.textContent='ON';coffee.textContent='REFILLED ☕';btn.textContent='✓ CHECK COMPLETE — RUN AGAIN';btn.disabled=false},900);
+});
+</script>
+</body>
+</html>
